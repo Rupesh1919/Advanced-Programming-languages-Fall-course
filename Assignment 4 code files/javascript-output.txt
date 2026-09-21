@@ -1,0 +1,102 @@
+
+EMPLOYEE WEEKLY SCHEDULER
+============================================================
+
+Enter Alice's preferred shift for each day.
+
+Enter Bob's preferred shift for each day.
+
+Enter Carol's preferred shift for each day.
+
+Enter David's preferred shift for each day.
+
+Enter Emma's preferred shift for each day.
+
+Enter Frank's preferred shift for each day.
+
+Enter Grace's preferred shift for each day.
+
+Enter Henry's preferred shift for each day.
+
+Enter Ivy's preferred shift for each day.
+
+
+======================================================================
+FINAL EMPLOYEE WEEKLY SCHEDULE
+======================================================================
+
+MONDAY
+----------------------------------------------------------------------
+Morning: Alice, David
+Afternoon: Bob, Emma
+Evening: Carol, Frank
+
+TUESDAY
+----------------------------------------------------------------------
+Morning: Ivy, Carol
+Afternoon: Grace, Alice
+Evening: Henry, Bob
+
+WEDNESDAY
+----------------------------------------------------------------------
+Morning: David, Henry
+Afternoon: Emma, Ivy
+Evening: Frank, Grace
+
+THURSDAY
+----------------------------------------------------------------------
+Morning: Alice, David
+Afternoon: Bob, Emma
+Evening: Carol, Frank
+
+FRIDAY
+----------------------------------------------------------------------
+Morning: Ivy, Carol
+Afternoon: Grace, Alice
+Evening: Henry, Bob
+
+SATURDAY
+----------------------------------------------------------------------
+Morning: David, Henry
+Afternoon: Emma, Ivy
+Evening: Frank, Grace
+
+SUNDAY
+----------------------------------------------------------------------
+Morning: Alice, David
+Afternoon: Bob, Emma
+Evening: Carol, Frank
+
+
+======================================================================
+EMPLOYEE WEEKLY WORKLOAD
+======================================================================
+Alice: 5 day(s)
+Bob: 5 day(s)
+Carol: 5 day(s)
+David: 5 day(s)
+Emma: 5 day(s)
+Frank: 5 day(s)
+Grace: 4 day(s)
+Henry: 4 day(s)
+Ivy: 4 day(s)
+
+
+======================================================================
+PREFERENCE SATISFACTION
+======================================================================
+Alice: 5/5 preferred shifts (100.0%)
+Bob: 5/5 preferred shifts (100.0%)
+Carol: 5/5 preferred shifts (100.0%)
+David: 5/5 preferred shifts (100.0%)
+Emma: 5/5 preferred shifts (100.0%)
+Frank: 5/5 preferred shifts (100.0%)
+Grace: 4/4 preferred shifts (100.0%)
+Henry: 4/4 preferred shifts (100.0%)
+Ivy: 4/4 preferred shifts (100.0%)
+
+
+======================================================================
+SCHEDULE VALIDATION
+======================================================================
+Schedule successfully satisfies all required constraints.
