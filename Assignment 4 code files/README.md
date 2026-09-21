@@ -1,116 +1,51 @@
-# Assignment 4: Employee Weekly Scheduler
+# Assignment 4: Employee Scheduler
 
-## Overview
+## What I Made
 
-This assignment implements an employee scheduling application in two different programming languages:
+For this assignment, I made the same employee scheduling program in Python and JavaScript. The program asks for employee names and their preferred shift for each day of the week. It then creates a schedule for the morning, afternoon, and evening shifts.
 
-- **Python**: `python code.py`
-- **JavaScript**: `javascript code.js`
+The program makes sure that:
 
-Both programs demonstrate conditionals, `for` and `while` loops, validation, branching, collections, helper functions, and random selection. The application schedules employees across seven days and three shifts: morning, afternoon, and evening.
+- Each shift has at least two employees when enough employees are available.
+- An employee does not work more than one shift in the same day.
+- An employee works no more than five days in one week.
+- Employee preferences are used when possible.
+- Employees are selected randomly when a shift still needs more people.
 
-## Assignment Requirements Implemented
+At the end, the program prints the weekly schedule, each employee's workload, preference results, and a validation message.
 
-### 1. Input and Storage
+## Languages Used
 
-The program collects:
+- Python: `python code.py`
+- JavaScript: `javascript code.js`
 
-- The number of employees
-- Each employee's name
-- Each employee's preferred shift for every day of the week
+I used Python dictionaries and lists, JavaScript objects and arrays, loops, conditionals, input validation, and random selection in both versions.
 
-Employee data is stored in a dictionary/object. Each employee record contains daily preferences and the number of days already assigned.
+## How to Run the Python Program
 
-### 2. Scheduling Logic
+Python 3 is required. No extra Python packages are needed.
 
-The scheduler applies these rules:
-
-- Monday through Sunday are supported.
-- Each day has morning, afternoon, and evening shifts.
-- Every shift requires at least two employees.
-- Each employee can work no more than one shift per day.
-- Each employee can work a maximum of five days per week.
-- A shift can contain no more than three employees in this implementation.
-- Preferred employees are selected first when possible.
-- If a shift still needs employees, an available employee is selected randomly.
-- If the employee pool is too small to satisfy all requirements, the program prints a warning instead of exceeding the daily or weekly limits.
-
-At least nine employees are normally needed to provide two employees for each of the 21 weekly shifts while keeping every employee at or below five working days.
-
-### 3. Shift Conflicts
-
-The scheduler checks whether an employee is already working that day before assigning another shift. It also checks whether the employee has reached the five-day weekly limit and whether the target shift has reached its capacity. These checks prevent duplicate daily assignments and invalid weekly workloads.
-
-### 4. Output
-
-After scheduling, the program displays:
-
-- The final schedule for every day and shift
-- Each employee's weekly workload
-- Preference satisfaction for each employee
-- Schedule validation results
-
-Sample outputs are included in:
-
-- `python-output.txt`
-- `javascript-output.txt`
-
-### 5. Bonus: Preferences
-
-The programs support the preference-related bonus by recording one preferred shift for each employee on each day. The scheduler attempts to honor these preferences first and reports the percentage of assigned shifts that matched each employee's preference.
-
-## Requirements
-
-### Python
-
-- Python 3.8 or newer
-- No external packages are required
-
-Check the installation:
+From the project folder, run:
 
 ```bash
-python3 --version
+python3 "Assignment 4 code files/python code.py"
 ```
 
-### JavaScript
+## How to Run the JavaScript Program
 
-- Node.js 14 or newer
-- `prompt-sync` for interactive terminal input
-
-Check the installation:
-
-```bash
-node --version
-npm --version
-```
-
-Install the JavaScript dependency from the `Assignment 4 code files` directory:
+Node.js is required. The JavaScript program uses the `prompt-sync` package for keyboard input. Install it once by running this from the project folder:
 
 ```bash
 npm install prompt-sync
 ```
 
-## How to Run
-
-Open a terminal in this directory:
+Then run:
 
 ```bash
-cd "Assignment 4 code files"
+node "Assignment 4 code files/javascript code.js"
 ```
 
-Run the Python version:
-
-```bash
-python3 "python code.py"
-```
-
-Run the JavaScript version:
-
-```bash
-node "javascript code.js"
-```
-
-For either program, enter a positive number of employees, then enter a unique name and one of these valid preferences for each day:
+When prompted, enter the number of employees, each employee's name, and a preference for every day. Valid preferences are:
 
 ```text
 morning
@@ -118,53 +53,35 @@ afternoon
 evening
 ```
 
-The JavaScript program can also read redirected input, which is useful for repeatable testing:
+Nine employees are recommended because the schedule needs 42 total assignments and each employee can work only five days.
 
-```bash
-node "javascript code.js" < input.txt
-```
+## Example Output
 
-## Control Structures Demonstrated
+The sample output files show a completed schedule:
 
-- **Conditionals**: input validation, capacity checks, weekly-limit checks, and validation error reporting
-- **Loops**: employee input loops, seven-day loops, shift loops, and repeated staffing loops
-- **Branching**: preferred-candidate selection versus random fallback selection, valid versus invalid input paths, and successful versus failed validation
-- **Collections**: Python dictionaries/lists and JavaScript objects/arrays for employee records and schedules
-- **Random selection**: fallback staffing chooses randomly from eligible employees when preferred candidates are unavailable
+- `python-output.txt`
+- `javascript-output.txt`
 
-## Example Result
-
-The included sample runs use nine employees. The schedule validation reports:
+Both sample runs show two employees on every shift and end with:
 
 ```text
 Schedule successfully satisfies all required constraints.
 ```
 
-The sample output also shows two employees assigned to every shift, no employee assigned more than one shift on a day, and no employee assigned more than five days in the week.
+The schedule can be different each time because the program randomly chooses employees when it needs extra staffing.
 
-Because fallback staffing uses random selection, schedules may differ between runs while still following the validation rules when enough employees are available.
-
-## Submission Checklist
-
-- [x] Source code in two distinct programming languages
-- [x] Employee input and shift preference storage
-- [x] Seven-day scheduling logic
-- [x] Minimum staffing requirement of two employees per shift
-- [x] Maximum of one shift per employee per day
-- [x] Maximum of five working days per employee per week
-- [x] Conflict and capacity checks
-- [x] Readable final schedule output
-- [x] Preference satisfaction output
-- [x] Schedule validation output
-- [ ] Add screenshot(s) of the final schedule output to the submission document
-- [ ] Include the public GitHub repository link in the submission document
-
-## Files
+## Files in This Folder
 
 | File | Description |
 | --- | --- |
-| `python code.py` | Python implementation |
-| `javascript code.js` | JavaScript implementation |
-| `python-output.txt` | Example Python execution output |
-| `javascript-output.txt` | Example JavaScript execution output |
-| `README.md` | Assignment description and run instructions |
+| `python code.py` | Python version of the scheduler |
+| `javascript code.js` | JavaScript version of the scheduler |
+| `python-output.txt` | Sample Python output |
+| `javascript-output.txt` | Sample JavaScript output |
+| `README.md` | Project information and run instructions |
+
+## Submission Items
+
+- Source code in Python and JavaScript
+- Screenshot of the final schedule output
+- Link to the public GitHub repository
